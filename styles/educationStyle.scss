@@ -18,7 +18,12 @@ body {
 }
 
 .header {
-  overflow-x: scroll;
+  overflow-x: auto;
+  white-space: nowrap;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   .header__list {
     display: flex;
     color: white;
@@ -40,7 +45,7 @@ body {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 15px;
 
   .cards__card {
     gap: 20px;
